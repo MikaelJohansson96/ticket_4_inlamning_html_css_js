@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function showSuccess() {
+      alert("Tack för din anmälan! Vi hör av oss snart.");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Kontakta oss</h1>
+    <nav>...</nav>
+  </header>
+  <main>
+    <form onsubmit="showSuccess(); return false;">
+      <label for="name">Namn:</label>
+      <input type="text" id="name" required>
+      <label for="email">E-post:</label>
+      <input type="email" id="email" required>
+      <label for="upload">Bifoga fil:</label>
+      <input type="file" id="upload">
+      <button type="submit">Skicka</button>
+    </form>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="400" height="300" style="border:0;" allowfullscreen></iframe>
+  </main>
+</body>
+</html>

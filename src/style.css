@@ -1,0 +1,98 @@
+:root{
+  --accent:#0b74de;
+  --bg:#f7f7f8;
+  --text:#222;
+  --muted:#666;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.4;
+}
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:10px;
+  top:10px;
+  width:auto;
+  height:auto;
+  background:#fff;
+  padding:8px;
+  z-index:1000;
+}
+
+.navbar{
+  background:#fff;
+  border-bottom:1px solid #e6e6e6;
+}
+.nav-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  max-width:1000px;
+  margin:0 auto;
+  padding:10px;
+}
+.logo{height:48px}
+.nav-list{
+  list-style:none;
+  display:flex;
+  gap:16px;
+  margin:0;
+  padding:0;
+}
+.nav-list a{
+  color:var(--accent);
+  text-decoration:none;
+  font-weight:600;
+}
+.nav-list a:hover,
+.nav-list a:focus{ text-decoration:underline; }
+
+.container{
+  max-width:1000px;
+  margin:20px auto;
+  padding:0 16px;
+  background:transparent;
+}
+
+.hero-image{ max-width:200px; display:block; margin:10px 0; }
+
+.video-wrap{ max-width:560px; overflow:hidden; }
+
+.form{ display:flex; flex-direction:column; gap:8px; max-width:420px; }
+.form label{ display:flex; flex-direction:column; gap:6px; font-weight:600; }
+.form input{ padding:8px; border:1px solid #ccc; border-radius:4px; }
+
+button{ background:var(--accent); color:#fff; border:none; padding:10px 14px; border-radius:6px; cursor:pointer; }
+button:hover{ opacity:0.95; }
+
+.success{ color:green; margin-top:8px; }
+
+.site-footer{ background:#fff; border-top:1px solid #e6e6e6; padding:12px 0; margin-top:30px; }
+.site-footer p{ margin:6px 0; text-align:center; color:var(--muted); }
+
+.responsive-table{ width:100%; border-collapse:collapse; margin-top:12px; }
+.responsive-table th,
+.responsive-table td{ border:1px solid #ddd; padding:8px; text-align:left; }
+.responsive-table thead{ background:#fafafa; }
+
+@media (max-width:700px){
+  .nav-list{ display:none; } /* keep simple; could add hamburger later */
+  .nav-inner{ justify-content:flex-start; gap:12px; }
+  .video-wrap iframe{ width:100%; height:auto; }
+  .map-wrap iframe{ width:100%; height:300px; }
+  .responsive-table{ display:block; overflow:auto; }
+}
+
