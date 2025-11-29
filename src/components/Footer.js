@@ -1,10 +1,14 @@
+import React from "react";
+
 export default function Footer() {
   return (
-    <footer className="site-footer">
+    <footer>
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Mikael Webbprojekt</p>
+        <p>© {new Date().getFullYear()} Mikael — Tillgänglig och responsiv webbplats i mörkt tema.</p>
         <p>
-          <a href="/cv.pdf" download>Hämta CV (PDF)</a>
+          <a href="/cv.pdf" download="Mikael_CV.pdf">Ladda ner CV</a>
+          <span style={{ marginLeft: 8 }} />
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
         </p>
       </div>
     </footer>

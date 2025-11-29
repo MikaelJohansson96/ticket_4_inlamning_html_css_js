@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -6,14 +7,14 @@ import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 
-function App() {
+export default function App() {
   return (
     <>
       <header>
         <Navbar />
       </header>
 
-      <main id="main">
+      <main id="main" role="main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -27,4 +28,3 @@ function App() {
   );
 }
 
-export default App;

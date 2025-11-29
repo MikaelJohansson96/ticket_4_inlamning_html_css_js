@@ -1,36 +1,40 @@
+import React from "react";
+import DownloadSection from "../components/DownloadSection";
+import SignupForm from "../components/SignupForm";
+
 export default function Home() {
   return (
-    <main className="container">
-      <h1>Välkommen till min webbplats</h1>
+    <div className="container">
+      <article className="page" aria-labelledby="home-heading">
+        <h1 id="home-heading">Välkommen till min portfolio</h1>
 
-      <section>
-        <h2>Snabbfakta</h2>
-        <ul>
-          <li>Favoritspel: Minecraft</li>
-          <li>Favoritmusik: Synthwave</li>
-          <li>Programmeringsspråk: JavaScript</li>
-        </ul>
-      </section>
+        <p>En flersidig, responsiv och tillgänglig webbplats i mörkt tema.</p>
 
-      <section>
-        <h2>Presentation</h2>
-        <img src="/logo.png" alt="Min logotyp" className="hero-image" />
-      </section>
+        <section aria-labelledby="features-heading">
+          <h2 id="features-heading">Vad du hittar här</h2>
+          <ul>
+            <li>Presentation och bakgrund</li>
+            <li>Projektlista med tabell</li>
+            <li>Inbäddad video</li>
+            <li>Filer att ladda ner och ladda upp</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>Demo-video</h2>
-        <div className="video-wrap">
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Demo video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </div>
-      </section>
-    </main>
+        <section aria-labelledby="video-heading">
+          <h2 id="video-heading">Introduktionsvideo</h2>
+          <div className="media-wrap" aria-hidden="false">
+            <iframe
+              title="Introduktionsvideo"
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+        </section>
+
+        <DownloadSection />
+        <SignupForm />
+      </article>
+    </div>
   );
 }
